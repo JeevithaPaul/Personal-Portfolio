@@ -21,7 +21,7 @@ function Login() {
                 navigate("/home");
             }
         });
-    }, []);
+    }, [navigate]);
 
     const handleLogin = (e) => {
         e.preventDefault();
