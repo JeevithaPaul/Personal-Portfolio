@@ -26,7 +26,7 @@ function Blogs() {
     });
 
     axios
-      .get("http://localhost:5000/api/blogs")
+      .get("https://personal-portfolio-backend-iota.vercel.app/api/blogs")
       .then((res) => {
         setBlogs(res.data);
       })
