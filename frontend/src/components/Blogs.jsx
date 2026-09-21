@@ -39,12 +39,12 @@ function Blogs() {
   const handleLike = async (blog_id) => {
     try {
       const response = await axios.patch(
-        `http://localhost:5000/api/blogs/like/${blog_id}`
+        `https://personal-portfolio-backend-iota.vercel.app/api/blogs/like/${blog_id}`
       );
 
       if (response.status === 200) {
         axios
-          .get("http://localhost:5000/api/blogs")
+          .get("https://personal-portfolio-backend-iota.vercel.app/api/blogs")
           .then((res) => {
             setBlogs(res.data);
           })
@@ -72,7 +72,7 @@ function Blogs() {
     const likes = 0;
 
     axios
-      .post("http://localhost:5000/api/blogs", {
+      .post("https://personal-portfolio-backend-iota.vercel.app/api/blogs", {
         newTitle,
         date,
         newContent,
@@ -82,7 +82,7 @@ function Blogs() {
         console.log(res.data);
 
         axios
-          .get("http://localhost:5000/api/blogs")
+          .get("https://personal-portfolio-backend-iota.vercel.app/api/blogs")
           .then((res) => {
             setBlogs(res.data);
           })
