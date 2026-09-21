@@ -7,3 +7,4 @@ blog-project-starter-backend/
 
 /package.json
 /package-lock.json
+backend/.env
